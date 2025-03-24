@@ -15,7 +15,11 @@ async function bootstrap() {
     max: 10,
   }));
 
-
+  app.enableCors({
+    origin: 'https://devpulse.uz',  // Faqat shu domen allowed
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'x-api-key'],
+  });
 
   await app.listen(5000);
 }
