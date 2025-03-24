@@ -15,10 +15,7 @@ async function bootstrap() {
     max: 10,
   }));
 
-  // Faqat ruxsat berilgan origin-lar:
-  app.enableCors({
-    origin: ['http://localhost:3000', 'https://devpulse.uz'],
-  });
+
 
   await app.listen(5000);
 }
